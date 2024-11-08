@@ -229,6 +229,13 @@
         }));
 
         runAsync().start();
+	let m = document.querySelector('.song-audio-autoplay');
+        if (m.paused ) {
+            m.play();
+            this.className = 'rotateImages';
+        } else {
+            m.pause();
+        }
     })();
 </script>
 
