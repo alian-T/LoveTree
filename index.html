@@ -134,6 +134,13 @@
         var hold = 1;
 
         canvas.click(function (e) {
+	const m = document.querySelector('.song-audio-autoplay');
+        if (m.paused ) {
+            m.play();
+            m.className = 'rotateImages';
+        } else {
+            m.pause();
+        }
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
@@ -229,13 +236,6 @@
         }));
 
         runAsync().start();
-	let m = document.querySelector('.song-audio-autoplay');
-        if (m.paused ) {
-            m.play();
-            this.className = 'rotateImages';
-        } else {
-            m.pause();
-        }
     })();
 </script>
 
