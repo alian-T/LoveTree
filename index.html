@@ -135,12 +135,7 @@
 
         canvas.click(function (e) {
 	const m = document.querySelector('.song-audio-autoplay');
-        if (m.paused ) {
-            m.play();
-            m.className = 'rotateImages';
-        } else {
-            m.pause();
-        }
+	m.play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
